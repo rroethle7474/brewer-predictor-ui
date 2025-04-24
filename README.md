@@ -20,6 +20,38 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Tailwind Theme Configuration
+
+This project uses a custom Tailwind CSS theme for Brewers branding:
+
+### Custom Colors
+- `brewers-navy`: #0A2351
+- `brewers-gold`: #B6922E
+- `brewers-yellow`: #FFCB05 (alternate accent)
+- `brewers-blue`: #13294B (alternate accent)
+
+Use these via `bg-brewers-navy`, `text-brewers-gold`, etc.
+
+### Typography
+- Headings use the `heading` font family (Oswald, Montserrat, etc.)
+- Body uses `Inter` and system sans-serif stack
+- Typography plugin is enabled for consistent text styling
+
+### Utilities
+- `bg-brewers-pattern`: Subtle diagonal line background
+
+### Extending
+See `tailwind.config.js` for all customizations. Adjust or add as needed for consistent design.
+
+---
+
+## Responsive Design
+- All layout and component classes use Tailwind's responsive utilities (`md:`, `lg:`, etc.)
+- Components are tested across device sizes
+- Touch-friendly spacing and tap targets are used where appropriate
+
+Refer to Tailwind's documentation for further responsive and theme utility usage.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
