@@ -103,42 +103,25 @@
 
 ---
 
-### 2. Home Page - Pre-Deadline Layout (WI-002)
+### 2. Home Page - Main Home Layout - Banner, Form, Leaderboard (WI-002)
 **Description:** Implement the home page layout as it will appear before the prediction submission deadline.
 **Tasks:**
-- Create prediction submission form with validation
-- Implement form submission functionality to backend
-- Design masked leaderboard that only shows user's own prediction after submission
-- Add notification system for successful submissions
-- Implement duplicate entry prevention (first/last name combination)
+- [] - Added banner indicating prediction deadline (this will be hardcoded within the component)
+- [] - Create prediction submission form with validation (first name, last name, wins). Disable prediction form after deadline
+- [] - Implement form submission functionality to backend (use API Endpoint) - for now use https://localhost:7226/api for the base url.
+- [] - set up base api hook or lib function class to implement. Please see backend-development-plan.md for details.
+- [] - Create full leaderboard component showing all predictions. Ensure leaderboard is sortable and has clear visual hierarchy
+- [] - Add notification system for successful submissions (toastr notifications or something similar and native to React/Tailwind)
+- [] - Handle duplicate entry error message returned from api (see backend-development-plan.md for details about the exception returned)
+- [] - Handle other error messages returned from api
 
 **Acceptance Criteria:**
 - Users can submit predictions via a clean, intuitive form
-- Form validates input (ensuring prediction is within reasonable range)
-- After submission, only user's own prediction is visible in leaderboard
 - Users cannot submit multiple predictions with same name combination
 - Submission status is clearly communicated to user
-
 ---
 
-### 3. Home Page - Post-Deadline Layout (WI-003)
-**Description:** Implement the home page layout as it will appear after the prediction submission deadline has passed.
-**Tasks:**
-- Create full leaderboard component showing all approved predictions
-- Implement ranking algorithm based on proximity to projected pace
-- Ensure leaderboard is sortable and has clear visual hierarchy
-- Add visual indicators for winning/close predictions
-- Disable prediction form after deadline
-
-**Acceptance Criteria:**
-- Complete leaderboard displays all approved predictions
-- Predictions are ranked by accuracy relative to projected pace
-- Leaderboard is visually clear and responsive on all devices
-- Submission form is replaced with appropriate messaging
-
----
-
-### 4. Game Results Display Section (WI-004)
+### 3. Game Results Display Section (WI-004)
 **Description:** Create the section displaying previous game results or upcoming/current game information.
 **Tasks:**
 - Implement API integration with MLB data source
@@ -164,8 +147,7 @@
 - Implement API integration with MLB standings data
 - Create responsive standings table/display for right half of top section
 - Highlight Brewers position in the standings
-- Include relevant team stats (wins, losses, games behind, etc.)
-- Implement caching strategy to reduce API calls
+- Include relevant team stats (wins, losses, etc.)
 
 **Acceptance Criteria:**
 - Standings display correctly and highlight Brewers position
@@ -339,55 +321,9 @@
 
 ---
 
-## Additional Items
-
-### 15. Authentication Mechanism (WI-015)
-**Description:** Implement simple authentication for admin pages.
-**Tasks:**
-- Create secure URL pattern or basic password protection
-- Implement client-side protection for admin routes
-- Add server-side validation for admin API calls
-
-**Acceptance Criteria:**
-- Admin pages are protected from unauthorized access
-- Authentication mechanism is simple but effective
-- Server validates admin access for sensitive operations
-
----
-
-### 16. Testing (WI-016)
-**Description:** Implement testing for key application components.
-**Tasks:**
-- Create unit tests for prediction submission logic
-- Implement tests for external API integrations
-- Add UI component tests for key interface elements
-- Create API endpoint tests
-
-**Acceptance Criteria:**
-- Core functionality is covered by appropriate tests
-- Tests ensure application reliability
-- Critical paths are validated
-
----
-
-### 17. Deployment Configuration (WI-017)
-**Description:** Set up deployment configuration for Azure.
-**Tasks:**
-- Configure Azure App Service for frontend and backend
-- Set up Azure SQL Database
-- Create deployment scripts
-- Configure environment variables
-
-**Acceptance Criteria:**
-- Application can be deployed to Azure with minimal manual steps
-- Database is properly configured
-- Environment variables are secured and properly set
-
----
 
 ## Dependencies and Relationships
 
-- WI-001 (Base Layout) should be completed before other frontend components
 - WI-010 and WI-011 (API Endpoints) should be completed before their corresponding frontend components
 - WI-014 (Type Definitions) should be completed early to support development
 - WI-002 (Pre-Deadline Layout) and WI-003 (Post-Deadline Layout) have shared components and should be developed together
