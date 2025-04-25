@@ -4,7 +4,7 @@ import { isDeadlinePassed } from '../utils/deadlineUtils';
 
 const DeadlineBanner: React.FC = () => {
   const deadlinePassed = isDeadlinePassed();
-  console.log("Deadline passed:", deadlinePassed);
+
   return (
     <>
     <div className={`mb-6 p-4 rounded-lg text-center ${

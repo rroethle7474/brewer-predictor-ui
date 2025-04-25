@@ -3,10 +3,6 @@ import Link from "next/link";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/leaderboard", label: "Leaderboard" },
-  { href: "/rules", label: "Rules" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
 ];
 
 const Footer: React.FC = () => {

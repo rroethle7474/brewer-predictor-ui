@@ -1,4 +1,6 @@
-import React from "react";
+'use client';
+import React, { useState } from "react";
+import MessageModal from '../modals/MessageModal';
 
 // TODO: Replace this with actual Brewers logo when available
 const brewersLogo = (
@@ -8,7 +10,13 @@ const brewersLogo = (
 );
 
 const Header: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
+    <>
     <header
       className="w-full bg-gradient-to-r from-blue-900 to-yellow-600 py-4 shadow-lg relative"
       style={{
@@ -23,8 +31,16 @@ const Header: React.FC = () => {
             Brewers Prediction Game
           </span>
         </div>
+        <button
+          onClick={openModal}
+          className="bg-brewers-gold hover:bg-brewers-gold/90 text-brewers-navy font-semibold py-2 px-4 rounded-md transition-colors"
+        >
+          Send Message
+        </button>
       </div>
     </header>
+    <MessageModal isOpen={isModalOpen} onClose={closeModal} />
+    </>
   );
 };
 

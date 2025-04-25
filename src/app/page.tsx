@@ -4,6 +4,8 @@ import PredictionForm from '../components/form/PredictionForm';
 import LeaderboardSection from '../components/home/LeaderboardSection';
 import { usePredictions } from '../components/hooks/usePredictions';
 import { isDeadlinePassed } from '../components/utils/deadlineUtils';
+import Standings from '@/components/home/Standings';
+import Rules from '@/components/home/Rules';
 
 export default function Home() {
   const { predictions, isLoading, error, addPrediction } = usePredictions();
@@ -27,6 +29,12 @@ export default function Home() {
         />
       </div>
     </div>
-  </div>
+    <div className="mt-8">
+        <Standings />
+      </div>
+      <div className="mt-8">
+        <Rules />
+      </div>
+    </div>
   );
 }

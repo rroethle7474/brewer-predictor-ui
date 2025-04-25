@@ -1,0 +1,75 @@
+.ruleCard {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.ruleNumber {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #666;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+}
+
+.ruleContent {
+  flex: 1;
+  padding: 1rem;
+  position: relative;
+  color: white;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.ruleTitle {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.ruleDescription {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* Card-specific colors */
+.ruleCard1 .ruleContent {
+  background-color: #c27bb0; /* Purple for first card */
+}
+
+.ruleCard2 .ruleContent {
+  background-color: #8e9ad3; /* Blue-purple for second card */
+}
+
+.ruleCard3 .ruleContent {
+  background-color: #7b9ed3; /* Blue for third card */
+}
+
+.ruleCard4 .ruleContent {
+  background-color: #5bc0de; /* Teal for fourth card */
+}
+
+.ruleCard5 .ruleContent {
+  background-color: #3d535a; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .ruleNumber {
+    font-size: 1.5rem;
+    min-width: 50px;
+  }
+  
+  .ruleContent {
+    padding: 0.75rem;
+  }
+}
