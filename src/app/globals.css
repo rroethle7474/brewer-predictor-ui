@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Brewers custom colors */
+  --brewers-navy: #0A2351;
+  --brewers-gold: #B6922E;
+  --brewers-yellow: #FFCB05;
+  --brewers-blue: #13294B;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,5 +21,65 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+/* Custom Brewers utility classes */
+.bg-brewers-navy {
+  background-color: var(--brewers-navy);
+}
+
+.bg-brewers-gold {
+  background-color: var(--brewers-gold);
+}
+
+.bg-brewers-yellow {
+  background-color: var(--brewers-yellow);
+}
+
+.bg-brewers-blue {
+  background-color: var(--brewers-blue);
+}
+
+.text-brewers-navy {
+  color: var(--brewers-navy);
+}
+
+.text-brewers-gold {
+  color: var(--brewers-gold);
+}
+
+.text-brewers-yellow {
+  color: var(--brewers-yellow);
+}
+
+.text-brewers-blue {
+  color: var(--brewers-blue);
+}
+
+/* Custom background pattern */
+.bg-brewers-pattern {
+  background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 20px);
+}
+
+/* Custom typography styles */
+h1, h2, h3 {
+  font-family: 'Oswald', 'Montserrat', 'ui-sans-serif', 'system-ui', sans-serif;
+}
+
+a {
+  color: var(--brewers-gold);
+  font-weight: bold;
+}
+
+/* Add typography plugin styles if needed */
+@layer components {
+  .prose {
+    color: var(--brewers-navy);
+  }
+  
+  .prose a {
+    color: var(--brewers-gold);
+    font-weight: bold;
+  }
 }

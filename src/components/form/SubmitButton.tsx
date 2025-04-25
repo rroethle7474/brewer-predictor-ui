@@ -16,7 +16,7 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
       <button
         type="submit"
         disabled={isSubmitting || disabled}
-        className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-brewers-navy bg-brewers-gold hover:bg-brewers-gold/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brewers-navy ${
+        className={`w-full flex justify-center py-2 px-4 cursor-pointer border rounded-md shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-brewers-navy ${
           (isSubmitting || disabled) ? 'opacity-70 cursor-not-allowed' : ''
         }`}
       >
